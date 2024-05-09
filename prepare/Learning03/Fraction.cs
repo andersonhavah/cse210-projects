@@ -57,7 +57,7 @@ public class Fraction
         return fractionString;
     }
 
-    // Create a method that returns a double 
+    // Create a method that returns the demical value of a fraction
     public double GetDecimalValue()
     {
         return (double)_top / (double)_bottom;
