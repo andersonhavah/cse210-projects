@@ -1,3 +1,4 @@
+// Class representing the library of scriptures
 public class ScriptureLibrary
 {
     // This is the member variables of the ScriptureLibrary class
@@ -16,7 +17,7 @@ public class ScriptureLibrary
         _scriptures.Add(new Scripture(new Reference("Matthew", 6, 9, 13), "This, then, is how you should pray: Our Father in heaven, hallowed be your name, your kingdom come, your will be done, on earth as it is in heaven. Give us today our daily bread. Give us today our daily bread. And forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from the evil one."));
     }
 
-    // This method returns a random scripture from the scripture library
+    // This method returns a random scripture from the scriptures' library
     public Scripture GetRandomScripture()
     {
         if (_scriptures.Count == 0)
