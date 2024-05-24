@@ -1,4 +1,4 @@
-// I exceeded the requirements for this assignment by implementing a library of scriptures and scripture get pulled from randomly. 
+// I exceeded the requirements for this assignment by implementing a library of scriptures and that scripture get pulled from randomly. 
 
 using System;
 using System.Collections.Generic;
