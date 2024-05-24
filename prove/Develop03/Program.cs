@@ -10,24 +10,32 @@ class Program
     {
         // Creating a new scripture
         ScriptureLibrary scriptureLibrary = new ScriptureLibrary();
+        
+
+        int i = 0; // This counts how many times the program loops through the library
 
         // Main loop for practicing scriptures
-        while (true)
+        while (i <= scriptureLibrary.GetScriptureLibrarySize())
         {
             Scripture currentScripture = scriptureLibrary.GetRandomScripture();
             PracticeScripture(currentScripture);
 
-            Console.WriteLine("\nPress Enter to practice another scripture or type 'quit' to exit.");
-            string input = Console.ReadLine();
+            i++;
 
-            if (input.ToLower() == "quit")
+            if (i < scriptureLibrary.GetScriptureLibrarySize())
             {
-                break;
+                Console.WriteLine("\nPress Enter to practice another scripture or type 'quit' to exit.");
+                string input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                {
+                    break;
+                }
             }
         }
 
-        Console.WriteLine("\nProgram ended. Press any key to exit.");
-        Console.ReadKey();
+        Console.WriteLine("\nProgram ended. You have memorized it all! Congrats!");
+        // Console.ReadKey();
     }
 
     static void PracticeScripture(Scripture scripture)
@@ -43,7 +51,7 @@ class Program
 
             if (input.ToLower() == "quit")
             {
-                return;
+                break;
             }
 
             // Hide a few random words
