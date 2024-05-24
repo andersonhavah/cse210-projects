@@ -11,7 +11,6 @@ class Program
         // Creating a new scripture
         ScriptureLibrary scriptureLibrary = new ScriptureLibrary();
         
-
         int i = 0; // This counts how many times the program loops through the library
 
         // Main loop for practicing scriptures
@@ -35,7 +34,6 @@ class Program
         }
 
         Console.WriteLine("\nProgram ended. You have memorized it all! Congrats!");
-        // Console.ReadKey();
     }
 
     static void PracticeScripture(Scripture scripture)
