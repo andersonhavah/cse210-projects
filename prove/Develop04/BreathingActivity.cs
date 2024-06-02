@@ -10,22 +10,19 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
-        DateTime futureTime =  GetFutureTime(GetDuration());
-        DateTime currentTime = GetCurrentTime();
 
         Console.Clear();
         DisplayStartingMessage();
         ShowSpinner(3);
 
         // Implement breathing in/out logic
-        while (currentTime <= futureTime) 
+        for (int i = 0; i * i < GetDuration(); i++) 
         {
             Console.WriteLine("Breathe in...");
-            ShowCountDown(2);
+            ShowCountDown(i);
             Console.WriteLine("Now breathe out...");
-            ShowCountDown(4);
+            ShowCountDown(i + 2);
             Console.WriteLine("");
-            currentTime = DateTime.Now;
         }
 
         ShowSpinner(3);
