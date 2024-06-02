@@ -10,7 +10,7 @@ public class Activity
     {
         _name = "";
         _description = "";
-        _duration = 30;
+        _duration = 20;
     }
 
     public void DisplayStartingMessage()
@@ -25,6 +25,7 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
+        Console.Clear();
         Console.WriteLine("\nGood job! Well done!");
         Console.WriteLine($"You have completed another {_duration} seconds of the {_name}\n");
         Thread.Sleep(3000); // Pause for 3 seconds
