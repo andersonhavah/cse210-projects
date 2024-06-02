@@ -14,26 +14,23 @@ public class ListingActivity : Activity
     // This is the constructor of the class
     public ListingActivity()
     {
-        _name = "Welcome to the Listing Activity";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-        _count = 0;
         _name = "Listing Activity";
     }
 
     public void Run()
     {
+        List<string> items;
         DisplayStartingMessage();
         ShowSpinner(3);
         GetRandomPrompt();
 
-        List<string> items = GetListFromUser();
+        Console.Write($"You may begin in: ");
+        ShowCountDown(5);
+
+        items = GetListFromUser();
         _count = items.Count;
         Console.WriteLine($"\nYou listed {_count} items:");
-
-        foreach (string item in items)
-        {
-            Console.WriteLine(item);
-        }
 
         DisplayEndingMessage();
     }
@@ -48,17 +45,19 @@ public class ListingActivity : Activity
 
     public List<string> GetListFromUser()
     {
-        List<string> items = new List<string>();
+        List<string> listFromUser = new List<string>();
         Console.WriteLine("\nEnter your list items (type 'done' to finish):");
         Console.Write("> ");
         string input = Console.ReadLine();
+        listFromUser.Add(input);
+
         while (input.ToLower() != "done")
         {
             Console.Write("> ");
-            items.Add(input);
+            listFromUser.Add(input);
             input = Console.ReadLine();
         }
-        return items;
+        return listFromUser;
     }
 
 }
