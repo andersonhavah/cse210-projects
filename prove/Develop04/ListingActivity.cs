@@ -20,7 +20,7 @@ public class ListingActivity : Activity
 
     public void Run()
     {
-        List<string> items;
+        
         DisplayStartingMessage();
         ShowSpinner(3);
         GetRandomPrompt();
@@ -28,9 +28,9 @@ public class ListingActivity : Activity
         Console.Write($"You may begin in: ");
         ShowCountDown(5);
 
-        items = GetListFromUser();
+        List<string> items = GetListFromUser();
         _count = items.Count;
-        Console.WriteLine($"\nYou listed {_count} items:");
+        Console.WriteLine($"\nYou listed {_count} items");
 
         DisplayEndingMessage();
     }
