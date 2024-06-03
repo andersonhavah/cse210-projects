@@ -1,7 +1,7 @@
-
+// This is the reflecting activity class
 public class ReflectingActivity : Activity
 {
-    // This is the class' attributes
+    // Below are the class' attributes or member variables
     private List<string> _prompts = new List<string>
         {
             "Think of a time when you stood up for someone else.",
@@ -22,14 +22,15 @@ public class ReflectingActivity : Activity
             "How can you keep this experience in mind in the future?",
         };
 
-    // This is the constructor
+    // This is the constructor of the reflecting class with no parameters.
     public ReflectingActivity()
     {
         _name = "Reflection Activity";
-        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life."; 
+        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
 
     }
 
+    // This is the function that runs the reflecting activity when called
     public void Run()
     {
         DisplayStartingMessage();
@@ -41,6 +42,7 @@ public class ReflectingActivity : Activity
         DisplayEndingMessage();
     }
 
+    // This function helps get a random prompt from the list of prompt
     public string GetRandomPrompt()
     {
         Random rand = new Random();
@@ -49,14 +51,16 @@ public class ReflectingActivity : Activity
         return randomPrompt;
     }
 
+    // This function helps get a random question from the list of questionl
     public string GetRandomQuestion()
     {
         Random rand = new Random();
         int index = rand.Next(_questions.Count);
-        string randomQuestion = $"Question: {_questions[index]}";
+        string randomQuestion = $"{_questions[index]}";
         return randomQuestion;
     }
 
+    // This function displays the prompt to the user
     public void DisplayPrompt()
     {
         Console.WriteLine("Consider the following prompt: \n");
@@ -67,19 +71,23 @@ public class ReflectingActivity : Activity
 
     }
 
+    // This function displays the question to the user
     public void DisplayQuestions()
     {
+        int time = 0;
         Console.WriteLine("\nNow ponder on each of the following questions as they related to this experience.");
         Console.Write($"You may begin in: ");
         ShowCountDown(5);
 
         Console.Clear();
-        foreach (string question in _questions)
+        while (time < _duration * 1000 && _questions.Count != 0)
         {
-            Console.Write($"\n> {question}");
+            Console.Write($"\n> {GetRandomQuestion()}");
             ShowSpinner(3);
-            Thread.Sleep(3000); // Pause for 3 seconds after each question
+            Thread.Sleep(2000); // Pause for 3 seconds after each question
+            time += 5000;
         }
+        Console.WriteLine("");
     }
 
 }
