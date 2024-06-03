@@ -1,3 +1,4 @@
+// This is the breathing activity class
 public class BreathingActivity : Activity
 {
 
@@ -8,6 +9,7 @@ public class BreathingActivity : Activity
         _name = "Breathing Activity";
     }
 
+    // This function helps run the breathing activity
     public void Run()
     {
 
@@ -16,12 +18,12 @@ public class BreathingActivity : Activity
         ShowSpinner(3);
 
         // Implement breathing in/out logic
-        for (int i = 0; i * i < GetDuration(); i++) 
+        for (int i = 0; i < _duration * 1000; i += 6000) 
         {
             Console.WriteLine("Breathe in...");
-            ShowCountDown(i);
+            ShowCountDown(2);
             Console.WriteLine("Now breathe out...");
-            ShowCountDown(i + 2);
+            ShowCountDown(4);
             Console.WriteLine("");
         }
 
