@@ -37,6 +37,7 @@ public class ListingActivity : Activity
         DisplayEndingMessage();
     }
 
+    // This function helps get a random prompt from the list of prompt
     public void GetRandomPrompt()
     {
         Random rand = new Random();
@@ -45,6 +46,7 @@ public class ListingActivity : Activity
         Console.WriteLine($"--- {_prompts[index]} ---\n");
     }
 
+    // This function helps get list of responses about a prompt they receive
     public List<string> GetListFromUser()
     {
         int time = 0;
@@ -61,6 +63,7 @@ public class ListingActivity : Activity
         {
             listFromUser.Add(input);
             time += 2500;
+            
             while (input.ToLower() != "done" && time < _duration * 1000)
             {
                 Console.Write("> ");
@@ -74,6 +77,5 @@ public class ListingActivity : Activity
             }
             return listFromUser;
         }
-
     }
 }
