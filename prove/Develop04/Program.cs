@@ -1,4 +1,4 @@
-// I exceeded the requirements by implementing and displaying to the user how many times they performed the activities before quitting program.
+// I exceeded the requirements by implementing and displaying to the user how many times they performed the activities before quitting program. 
 
 using System;
 using System.Collections.Generic;
