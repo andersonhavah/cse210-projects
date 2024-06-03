@@ -1,3 +1,5 @@
+// This is the activity class which is the base class that other activities' classes inherit.
+
 public class Activity
 {
     // Declare the attributes off the Activity class
@@ -5,7 +7,7 @@ public class Activity
     protected string _description;
     protected int _duration;
 
-    // This is the constructor of the class
+    // This is the constructor of the class with no parameters
     public Activity()
     {
         _name = "";
@@ -13,6 +15,8 @@ public class Activity
         _duration = 20;
     }
 
+    // This function displays the welcome and starting message at the 
+    // beginning of an activity to the user
     public void DisplayStartingMessage()
     {
         Console.WriteLine($"\nWelcome to the {_name}.\n");
@@ -23,11 +27,11 @@ public class Activity
         Thread.Sleep(1000); // Pause for 1 seconds
     }
 
+    // This functions displays the ending message at the end of an activity
     public void DisplayEndingMessage()
     {
-        Console.Clear();
         Console.WriteLine("\nGood job! Well done!");
-        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}\n");
+        Console.WriteLine($"You have completed {_duration} seconds of the {_name}\n");
         Thread.Sleep(3000); // Pause for 3 seconds
     }
 
@@ -60,50 +64,5 @@ public class Activity
         }
     }
 
-    public DateTime GetFutureTime(int duration)
-    {
-        DateTime futureTime = new DateTime();
-        futureTime = DateTime.Now.AddSeconds(duration);
-
-        return futureTime;
-    }
-
-    public DateTime GetCurrentTime()
-    {
-        DateTime currentTime = new DateTime();
-        currentTime = DateTime.Now;
-        return currentTime;
-    }
-
-    // Below are the getters
-    public string GetName()
-    {
-        return _name;
-    }
-
-    public string GetDescription()
-    {
-        return _description;
-    }
-
-    public int GetDuration()
-    {
-        return _duration;
-    }
-
-    // Below are the setters
-    public void SetName(string name)
-    {
-        _name = name;
-    }
-
-    public void SetDescription(string description)
-    {
-        _description = description;
-    }
-
-    public void SetDuration(int duration)
-    {
-        _duration = duration;
-    }
+   
 }
