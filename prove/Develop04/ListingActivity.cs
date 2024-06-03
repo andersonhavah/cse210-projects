@@ -1,3 +1,4 @@
+// This the listing activity class
 public class ListingActivity : Activity
 {
     // This is the class' attributes
@@ -18,9 +19,10 @@ public class ListingActivity : Activity
         _name = "Listing Activity";
     }
 
+    // This function helps run the listing activity 
     public void Run()
     {
-        
+
         DisplayStartingMessage();
         ShowSpinner(3);
         GetRandomPrompt();
@@ -39,25 +41,39 @@ public class ListingActivity : Activity
     {
         Random rand = new Random();
         int index = rand.Next(_prompts.Count);
-        Console.WriteLine("List as many responses as you can to the following prompt: ");
-        Console.WriteLine($"--- {_prompts[index]} ---");
+        Console.WriteLine("\nList as many responses as you can to the following prompt: ");
+        Console.WriteLine($"--- {_prompts[index]} ---\n");
     }
 
     public List<string> GetListFromUser()
     {
+        int time = 0;
         List<string> listFromUser = new List<string>();
         Console.WriteLine("\nEnter your list items (type 'done' to finish):");
         Console.Write("> ");
         string input = Console.ReadLine();
-        listFromUser.Add(input);
 
-        while (input.ToLower() != "done")
+        if (input == "done")
         {
-            Console.Write("> ");
-            listFromUser.Add(input);
-            input = Console.ReadLine();
+            return listFromUser;
         }
-        return listFromUser;
-    }
+        else
+        {
+            listFromUser.Add(input);
+            time += 2500;
+            while (input.ToLower() != "done" && time < _duration * 1000)
+            {
+                Console.Write("> ");
+                input = Console.ReadLine();
+                if (input == "done")
+                {
+                    break;
+                }
+                listFromUser.Add(input);
+                time += 2500;
+            }
+            return listFromUser;
+        }
 
+    }
 }
