@@ -7,19 +7,20 @@ class Program
     static void Main(string[] args)
     {
         Square square = new Square("blue", 5);
-        string squareColor = square.GetColor();
-        double squareArea = square.GetArea();
-        Console.WriteLine($"The square has a color of {squareColor} and an area of {squareArea}.\n");
 
         Rectangle rectangle = new Rectangle("red", 5, 3);
-        string rectangleColor = rectangle.GetColor();
-        double rectangleArea = rectangle.GetArea();
-        Console.WriteLine($"The rectangle has a color of {rectangleColor} and an area of {rectangleArea}.\n");
 
         Circle circle = new Circle("pink", 8);
-        string circleColor = circle.GetColor();
-        double circleArea = circle.GetArea();
-        Console.WriteLine($"The circle has a color of {circleColor} and an area of {circleArea}.\n");
+
+        List<Shape> shapes = new List<Shape>();
+        shapes.Add(square);
+        shapes.Add(rectangle);
+        shapes.Add(circle);
+
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine($"The shape of {shape.GetColor()} color and has an area of {shape.GetArea()}.\n");
+        }
 
 
 
