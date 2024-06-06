@@ -10,7 +10,7 @@ public class Video {
     public int _length;
     public List<Comment> _comments;
 
-    // This is the constructor of the Video class
+    // This is the constructor of the Video class with three parameters
     public Video(string title, string author, int length)
     {
         _title = title;
