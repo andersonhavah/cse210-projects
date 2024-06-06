@@ -2,7 +2,7 @@ using System;
 
 namespace learning05
 {
-    public class Shape
+    public abstract class Shape
     {
         // This is the attribute or member variable of the Shape class
         private string _color;
@@ -25,10 +25,12 @@ namespace learning05
         }
 
         // This is virtual method
-        public virtual double GetArea()
-        {
-            return 0;
-        }
+        // public virtual double GetArea()
+        // {
+        //     return 0;
+        // }
+
+        public abstract double GetArea();
 
 
     }
