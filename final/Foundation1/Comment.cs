@@ -7,13 +7,14 @@ public class Comment{
     public string _name;
     public string _text;
 
-    // This is the constructor
+    // This is the constructor with two parameters
     public Comment(string name, string text)
     {
         _name = name;
         _text = text;
     }
 
+    // This method displays the comment
     public void DisplayComment()
     {
         Console.WriteLine($"    {_name}: {_text}");
