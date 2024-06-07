@@ -21,24 +21,6 @@ public class Event
         _address = address;
     }
 
-    // This virtual method returns a standard detail (title and description) of the event
-    // public string GetStandardDetails()
-    // {
-    //     return $"Event Information: \n\tTitle: {_title}\n\tDescription: {_description}\n\tDate: {_date}\n\tTime: {_time}\n\tAddress: {_address.GetFullAddressForm()}";
-    // }
-
-    // This method returns a full detail of the event
-    // public string GetFullDetails()
-    // {
-    //     return $"Event Information: \n\tTitle: {_title}\n\tDescription: {_description}\n\tDate: {_date}\n\tTime: {_time}\n\tAddress: {_address.GetFullAddressForm()}";
-    // }
-
-    // // This method returns a short description of the event
-    // public string GetShortDescription()
-    // {
-    //     return $"Event Type: {GetType().Name}\nTitle: {_title}\nDate: {_date}";
-    // }
-
     // Below are the getters of the member variables
     public string GetTitle()
     {
