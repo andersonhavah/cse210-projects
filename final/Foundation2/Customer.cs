@@ -1,4 +1,4 @@
-// This is the customer class for the online order program
+// This is the customer class for the online ordering program
 using System;
 
 public class Customer
