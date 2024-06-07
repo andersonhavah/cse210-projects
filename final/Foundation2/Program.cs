@@ -24,12 +24,12 @@ class Program
         Product product3 = new Product("LG 55 inch 8K Flat Screen TV", "L864", 5988.99M, 1);
 
         // Orders of each customer
-        Order order1 = new Order(new List<Product> {product1, product3}, customer1);
-        Order order2 = new Order(new List<Product> {product1, product2, product3}, customer2);
-        Order order3 = new Order(new List<Product> {product2, product3}, customer3);
+        Order order1 = new Order(new List<Product> { product1, product3 }, customer1);
+        Order order2 = new Order(new List<Product> { product1, product2, product3 }, customer2);
+        Order order3 = new Order(new List<Product> { product2, product3 }, customer3);
 
         // Adding each order into a list of orders
-        List<Order> orders = new List<Order> {order1, order2, order3};
+        List<Order> orders = new List<Order> { order1, order2, order3 };
 
         int customerNumber = 1;
 
