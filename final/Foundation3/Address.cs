@@ -24,7 +24,7 @@ public class Address
     // This method returns the address in a full form
     public string GetFullAddressForm()
     {
-        return $"\n\t{_street}, {_city}, \n\t{_state} {_zipcode}, \n\t{_country}";
+        return $"\n\t\t{_street}, {_city}, \n\t\t{_state} {_zipcode}, \n\t\t{_country}";
     }
 
     // Below are the getters and setters for the member variables
