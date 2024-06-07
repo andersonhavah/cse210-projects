@@ -1,4 +1,4 @@
-// This is the order class
+// This is the order class for the online ordering program
 using System;
 
 public class Order
