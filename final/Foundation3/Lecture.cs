@@ -18,18 +18,18 @@ public class Lecture : Event
     // This method returns the standard details of the Lecture event
     public string GetStandardDetails()
     {
-        return $"Event Information: \n\tTitle: {GetTitle()}\n\tDescription: {GetDescription()}\n\tDate: {GetDate()}\n\tTime: {GetTime()}\n\tAddress: {GetAddress()}";
+        return $"Standard Details: \n\tTitle: {GetTitle()}\n\tDescription: {GetDescription()}\n\tDate: {GetDate()}\n\tTime: {GetTime()}\n\tAddress: {GetAddress()}";
     }
 
     // This method returns the full details of the Lecture event
     public string GetFullDetails()
     {
-        return $"{GetStandardDetails()}\n\tSpeaker: {_speaker}\n\tCapacity: {_capacity}";
+        return $"Full Details: \n\tTitle: {GetTitle()}\n\tDescription: {GetDescription()}\n\tDate: {GetDate()}\n\tTime: {GetTime()}\n\tAddress: {GetAddress()}\n\tSpeaker: {_speaker}\n\tCapacity: {_capacity}";
     }
 
     // This method returns a short description of the Lecture event
     public string GetShortDescription()
     {
-        return $"Event Type: {GetType().Name}\nTitle: {GetTitle()}\nDate: {GetDate()}";
+        return $"Short Description: \n\tEvent Type: {GetType().Name}\n\tTitle: {GetTitle()}\n\tDate: {GetDate()}";
     }
 }
