@@ -1,4 +1,4 @@
-// This is the online ordering program
+// This is the online ordering program 
 
 using System;
 
