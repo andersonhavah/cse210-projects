@@ -201,34 +201,4 @@ public class GoalManager
         }
     }
 
-
-    //     public void LoadGoals(string filename)
-    //     {
-    //         if (File.Exists(filename))
-    //         {
-    //             string[] lines = File.ReadAllLines(filename);
-    //             _score = int.Parse(lines[0]);
-
-    //             _goals.Clear();
-    //             for (int i = 1; i < lines.Length; i++)
-    //             {
-    //                 string[] parts = lines[i].Split(':');
-    //                 string goalType = parts[0];
-    //                 string[] goalDetails = parts[1].Split(',');
-
-    //                 if (goalType == nameof(SimpleGoal))
-    //                 {
-    //                     _goals.Add(new SimpleGoal(goalDetails[0], goalDetails[1], int.Parse(goalDetails[2])));
-    //                 }
-    //                 else if (goalType == nameof(EternalGoal))
-    //                 {
-    //                     _goals.Add(new EternalGoal(goalDetails[0], goalDetails[1], int.Parse(goalDetails[2])));
-    //                 }
-    //                 else if (goalType == nameof(ChecklistGoal))
-    //                 {
-    //                     _goals.Add(new ChecklistGoal(goalDetails[0], goalDetails[1], int.Parse(goalDetails[2]), int.Parse(goalDetails[3]), int.Parse(goalDetails[4])));
-    //                 }
-    //             }
-    //         }
-    //     }
 }
