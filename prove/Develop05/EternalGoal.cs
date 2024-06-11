@@ -20,9 +20,9 @@ public class EternalGoal : Goal
         return false; // Eternal goals are never complete
     }
 
+    // This method returns all details of the Eternal Goal
     public override string GetStringRepresentation()
     {
         return $"Eternal Goal: {_shortName}, {_description}, {_points}";
-
     }
 }
