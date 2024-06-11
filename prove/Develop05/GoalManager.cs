@@ -134,7 +134,7 @@ public class GoalManager
         Console.WriteLine("");
         Console.Write("Enter goal name to record event: ");
         string goalName = Console.ReadLine();
-        var goal = _goals.Find(g => g.GetType().Name == goalName);
+        Goal goal = _goals.Find(g => g.GetType().Name == goalName);
         if (goal != null)
         {
             goal.RecordEvent();
