@@ -72,7 +72,7 @@ public class GoalManager
     // This method lists the details of the goal to the user
     public void ListGoalsDetails()
     {
-        if (_goals.Count() != 0)
+        if (_goals.Count() > 0)
         {
             foreach (Goal goal in _goals)
             {
