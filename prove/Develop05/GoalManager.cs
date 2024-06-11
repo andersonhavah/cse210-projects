@@ -1,5 +1,6 @@
 // This is the goal manager class
 using System;
+using System.Collections.Generic;
 
 public class GoalManager
 {
@@ -14,6 +15,7 @@ public class GoalManager
         _score = 0;
     }
 
+    // This method starts the program
     public void Start()
     {
         bool running = true;
@@ -61,11 +63,13 @@ public class GoalManager
     }
 
 
+    // This function displays the score to the player
     public void DisplayPlayerInfo()
     {
         Console.WriteLine($"Score: {_score}");
     }
 
+    // This method lists the details of the goal to the user
     public void ListGoalsDetails()
     {
         if (_goals.Count() != 0)
@@ -83,6 +87,7 @@ public class GoalManager
 
     }
 
+    // This method creates a new goal
     public void CreateGoal()
     {
         Console.WriteLine();
@@ -93,6 +98,7 @@ public class GoalManager
         Console.Write("Select an option: ");
         string choice = Console.ReadLine();
 
+        Console.WriteLine("");
         Console.Write("Enter name: ");
         string name = Console.ReadLine();
         Console.Write("Enter description: ");
@@ -122,6 +128,7 @@ public class GoalManager
         }
     }
 
+    // This method records an event for a defined goal 
     public void RecordEvent()
     {
         Console.WriteLine("");
@@ -143,6 +150,7 @@ public class GoalManager
         }
     }
 
+    // This function saves goals to a file
     public void SaveGoals(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
@@ -155,6 +163,7 @@ public class GoalManager
         }
     }
 
+    // This functio loads goals from a file
     public void LoadGoals(string filename)
     {
         if (File.Exists(filename))
@@ -192,36 +201,6 @@ public class GoalManager
         }
     }
 
-
-    public void ListGoalDetails()
-    {
-        foreach (Goal goal in _goals)
-        {
-            Console.WriteLine(goal.GetDetailsString());
-        }
-    }
-
-    // public void RecordEvent(string goalName)
-    // {
-    //     Goal goal = _goals.Find(g => g.GetType().Name == goalName);
-    //     if (goal != null)
-    //     {
-    //         goal.RecordEvent();
-    //         _score += goal.IsComplete() ? goal.GetPoints() : 0;
-    //     }
-    // }
-
-    // public void SaveGoals(string filename)
-    // {
-    //     using (StreamWriter outputFile = new StreamWriter(filename))
-    //     {
-    //         outputFile.WriteLine(_score);
-    //         foreach (Goal goal in _goals)
-    //         {
-    //             outputFile.WriteLine(goal.GetStringRepresentation());
-    //         }
-    //     }
-    // }
 
     //     public void LoadGoals(string filename)
     //     {
